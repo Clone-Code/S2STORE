@@ -169,7 +169,7 @@
       position: relative;
       font-weight: 500;
       font-size: 2.5em;
-      color: pink;
+      color: #000055;
   }
   .cardBox .card .cardName {
       color: black;
@@ -181,7 +181,7 @@
       color: grey;
   }
   .cardBox .card:hover {
-      background: pink;
+      background: #000055;
   }
   .cardBox .card:hover .number,
   .cardBox .card:hover .cardName,
@@ -226,7 +226,7 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .details .productOrders table tr:hover {
-      background: pink;
+      background: #000055;
       color: white;
   }
   .details .productOrders table tr td {
