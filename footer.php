@@ -1,78 +1,49 @@
-<section class="contact_section layout_padding">
-    <h2 class="custom_heading text-center">
-      NOW CONTACT US
-    </h2>
-    <div class="container mt-5 pt-5">
-      <form action="">
-        <div>
-          <input type="text" placeholder="NAME">
-        </div>
-        <div>
-          <input type="email" placeholder="EMAIL">
-        </div>
-        <div>
-          <input type="text" placeholder="PHONE NUMBER">
-        </div>
-        <div>
-          <input type="text" class="message-box" placeholder="MESSAGE">
-        </div>
-        <div class="d-flex justify-content-center mt-5 pt-5">
-          <button>
-            SEND
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
+<footer class="footer-distributed">
+  <div class="footer-left">
+    <h3><span>S2STORE</span></h3>
+    <p class="footer-links">
+      <a href="#" class="link-1">ĐỒNG HỒ NAM</a>
 
-  <!-- info section -->
-  <section class="info_section layout_padding">
-    <div class="container">
-      <div class="info_items">
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-1">
-              <img src="" alt="">
-            </div>
-            <div class="detail-box">
-              <p>
-                Cầu Giấy, Hà Nội
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-2">
-              <img src="" alt="">
-            </div>
-            <div class="detail-box">
-              <p>
-                +84 234567890
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="">
-          <div class="item ">
-            <div class="img-box box-3">
-              <img src="" alt="">
-            </div>
-            <div class="detail-box">
-              <p>
-                s2store@gmail.com
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+      <a href="#">ĐỒNG HỒ NỮ</a>
 
-  <!-- footer section -->
-  <section class="container-fluid footer_section">
-    <p>
-      © 2020 All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
     </p>
-  </section>
+
+    <p class="footer-company-name">S2STORE © 2021</p>
+  </div>
+
+  <div class="footer-center">
+
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p><span>1 Cầu Giấy</span> Hà Nội, Việt Nam</p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p>+84.1412.1412.14</p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><a href="mailto:support@company.com">cskh@s2store.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer-right">
+
+    <p class="footer-company-about">
+      <span>HANOI STORES</span>
+      33 Hàm Long, Hoàn Kiếm.<br>
+      9 B7 Phạm Ngọc Thạch, Đống Đa.<br>
+      173C Kim Mã, Ba Đình.
+    </p>
+
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+    </div>
+
+  </div>
+</footer>
