@@ -1,6 +1,6 @@
 <div class="main">
     <?php
-    require 'topbar.php';
+    require '../topbar.php';
     ?>
     <div class="cardBox">
         <div class="card">

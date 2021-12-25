@@ -7,7 +7,7 @@
   }
   body {
       min-height: 100vh;
-      overflow: hidden;
+      /* overflow: hidden; */
   }
   /* sidebar */
   .container {
@@ -85,7 +85,7 @@
       transition: 0.5s;
   }
   .topbar {
-      background: whitesmoke;
+    background: whitesmoke;
     width: 100%;
     height: 60px;
     display: flex;
@@ -194,7 +194,7 @@
       width: 100%;
       padding: 20px;
       display: grid;
-      grid-template-columns: repeat(3, 1);
+      /* grid-template-columns: repeat(4, 1); */
       grid-gap: 30px;
   }
   .details .productOrders {
@@ -210,9 +210,17 @@
       justify-content: space-between;
       align-items: flex-start;
   }
-  cardHeader h2{
+  .cardHeader h2 {
       font-weight: 600;
-      color: blue;
+      color: #000055;
+  }
+  .btn {
+      position: relative;
+      padding: 5px 10px;
+      background: #000055;
+      text-decoration: none;
+      color: white;
+      border-radius: 6px;
   }
   .details table {
       width: 100%;
@@ -251,5 +259,63 @@
       font-size: 14px;
       font-weight: 500;
   }
+  /* tables */
+.tables {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    /* grid-template-columns: repeat(4, 1); */
+    grid-gap: 30px;
+    margin-top: 20px;
+}
+.tables .products {
+    position: relative;
+    display: grid;
+    min-height: 400px;
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+}
+.cardHeaders {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeaders h2 {
+    font-weight: 600;
+    color: #000055;
+}
+.btns {
+    position: relative;
+    padding: 5px 10px;
+    background: #000055;
+    text-decoration: none;
+    color: white;
+    border-radius: 6px;
+}
+.tables table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.tables table thead td {
+    font-weight: 600;
+}
+.tables .products table tr {
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/* .tables .products table tr:hover {
+    background: #000055;
+    color: white;
+} */
+.tables .products table tr td {
+    padding: 10px;
+}
+.tables .products table tr td {
+    text-align: center;
+}
+
   
   

@@ -9,7 +9,9 @@
         </label>
     </div>
     <div class="user">
-        <div class="userName">Simp</div>
-        <img src="user.jpg" alt="">
+        <a href="">
+            <div class="userName">Simp</div>
+            <img src="../admins/image/user.jpg" alt="">
+        </a>
     </div>
 </div>
