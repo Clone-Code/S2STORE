@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 * {
     margin: 0;
@@ -319,3 +320,370 @@
 
   
   
+=======
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+}
+.menu {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  transition: 0.4s;
+  position: relative;
+  width: 100%;
+  top: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding: 20px 10px;
+}
+
+.menu a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  font-size: 21px;
+  text-decoration: none; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.menu-right {
+  padding: 0px 50px;
+  float: right;
+}
+
+.logo {
+  padding-left: 50px;
+}
+.menu .logo a{
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.4s;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.menu a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.menu .search-container {
+  float: right;
+}
+
+.menu input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.menu .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.menu .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 580px) {
+  .menu {
+    padding: 20px 10px !important;
+  }
+  .menu .search-container {
+    float: none;
+  }
+
+  .menu a, .menu input[type=text], .menu .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 50px;
+  }
+
+  .menu input[type=text] {
+    border: 1px solid #ccc;  
+  }
+
+  .menu-right {
+    float: none;
+  }
+}
+
+slideshow session 
+.mySlides {display:none;}
+
+/* Products */
+.mid {
+  width: 100%;
+  background-color: none;
+  padding-left: 20pt;
+}
+h1 {
+  margin: 0;
+  font-size: 40px;
+  margin-top: 35pt;
+  margin-left: 20pt;
+  font-weight: bold;
+}
+h2 {
+  margin: 0;
+  margin-left: 20pt;
+  margin-top: 30pt;
+  margin-bottom: 15pt;
+  text-align: center;
+  padding-bottom: 10pt;
+}
+h3 {
+  font-family: monospace;
+  font-weight: light;
+  margin: 0;
+  margin-left: 20pt;
+  margin-top: 15pt;
+  font-size: 16px;
+}
+h3 a:link, h3 a:visited, h3 a:active, h3 a:hover{
+  color: #333;
+}
+.row {
+  background-color: none;
+  height: 350pt;
+  margin-left: 30pt;
+  margin-bottom: 10pt;
+  white-space:nowrap
+}
+.item {
+  display: inline-block;
+  width: 250pt;
+  height: 320pt;
+  background-color: #fff;
+  border-radius: 6pt;
+  margin-right: 15pt;
+  transition: 0.2s ease-in-out;
+}
+.item:link, .item:visited, .item:active {
+  color: #333;
+  text-decoration: none;
+}
+.item:hover {
+  opacity: 0.75;
+  transform: scale(0.98);
+  color: #333;
+  text-decoration: none;
+  box-shadow: 11px 11px 11px rgba(33,33,33,.2)}
+.image {
+  height: 260pt;
+  width: 250pt;
+  backgroud-color: #dddddd;
+  border-radius: 6pt 6pt 0pt 0pt;
+  background-size: cover;
+  background-position: center center;
+}
+.item_description {
+  margin: 0;
+  padding-top: 5pt;
+  font-size: 17px;
+  margin-left: 10pt;
+  margin-right: 10pt;
+  text-align: center;
+  font-family: monospace;
+}
+
+/* footer session */
+.footer-distributed{
+  background: #e9e9e9;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+  width: 40%;
+}
+.footer-distributed .footer-left h3 span{
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.4s;
+}
+/* Footer links */
+
+.footer-distributed .footer-links{
+  color:  #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+  color: black;
+}
+
+.footer-distributed .footer-links a{
+  display:inline-block;
+  line-height: 1.8;
+  font-weight:400;
+  text-decoration: none;
+}
+
+.footer-distributed .footer-company-name{
+  color:  #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+/* Footer Center */
+
+.footer-distributed .footer-center{
+  width: 35%;
+}
+
+.footer-distributed .footer-center i{
+  background-color:  #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+  display: inline-block;
+  color: #000000;
+  font-weight:400;
+  vertical-align: middle;
+  margin:0;
+}
+
+.footer-distributed .footer-center p span{
+  display:block;
+  font-weight: normal;
+  font-size:14px;
+  line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+  color:  black;
+  text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+  line-height: 20px;
+  color:  #000000;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+  display: block;
+  color:  #000;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color:  #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed{
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i{
+    margin-left: 0;
+  }
+
+}
+>>>>>>> main
