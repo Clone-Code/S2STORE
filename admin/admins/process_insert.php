@@ -9,7 +9,8 @@
     $gender = $_POST['gender'];
     $birth = $_POST['birth'];
     $phone = $_POST['phone'];
-    $password = $_POST['password'];
+    $time = strtotime($birth);
+    $password = date("dmY", $time);
     $role = $_POST['role'];
 
     require '../connect.php';

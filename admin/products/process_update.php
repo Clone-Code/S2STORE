@@ -12,12 +12,24 @@
     } else {
         $file_name = $_POST['image_old'];
     }
+    $gender = $_POST['gender'];
+    $id_brand = $_POST['id_brand'];
+    $strap = $_POST['strap'];
+    $movement = $_POST['movement'];
+    $price = $_POST['price'];
+    $description = $_POST['description'];
 
     require '../connect.php';
-    $sql = "update brands
+    $sql = "update products
     set
     name = '$name',
-    image = '$file_name'
+    image = '$file_name',
+    gender = '$gender',
+    id_brand = '$id_brand',
+    strap = '$strap',
+    movement = '$movement',
+    price = '$price',
+    description = '$description'
     where id = '$id'
     ";
 

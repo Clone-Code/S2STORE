@@ -43,7 +43,7 @@
                             <tr>
                                 <td> <?php echo $i++ ?></td>
                                 <td> <?php echo $brand['name'] ?></td>
-                                <td> <img src="image/<?php echo $brand['image'] ?>"> </td>
+                                <td> <img src="image/<?php echo $brand['image'] ?>" height="100"> </td>
                                 <td><a href="form_update.php?id=<?php echo $brand['id'] ?>">Sửa</a></td>
                                 <td><a href="delete.php?id=<?php echo $brand['id'] ?>">X</a></td>
                             </tr>

@@ -6,11 +6,11 @@
     $gender = $_POST['gender'];
     $birth = $_POST['birth'];
     $phone = $_POST['phone'];
-    $password = $_POST['password'];
     $role = $_POST['role'];
 
 
     require '../connect.php';
+
     $sql = "update admins
     set
     name = '$name',
@@ -19,7 +19,6 @@
     gender = '$gender',
     birth = '$birth',
     phone = '$phone',
-    password = '$password',
     role = '$role'
     where id = '$id'
     ";

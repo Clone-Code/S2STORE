@@ -7,8 +7,8 @@
     $image = $_FILES['image'];
     $gender = $_POST['gender'];
     $id_brand = $_POST['id_brand'];
-    $id_strap = $_POST['id_strap'];
-    $id_movement = $_POST['id_movement'];
+    $id_strap = $_POST['strap'];
+    $id_movement = $_POST['movement'];
     $price = $_POST['price'];
     $description = $_POST['description'];
 
@@ -23,7 +23,7 @@
 
     require '../connect.php';
     $sql = "insert into products(name, image, gender, id_brand, id_strap, id_movement, price, description)
-    values('$name', '$file_name', '$gender', '$id_brand', '$id_strap', '$id_movement', '$price', '$description')";
+    values('$name', '$file_name', '$gender', '$id_brand', '$strap', '$movement', '$price', '$description')";
 
     mysqli_query($connect, $sql);
     $error = mysqli_error($connect);

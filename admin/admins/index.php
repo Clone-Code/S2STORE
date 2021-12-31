@@ -36,6 +36,7 @@
                             <th>Email</th>
                             <th>Thông tin</th>
                             <th>Chức vụ</th>
+                            <th>Đặt lại mật khẩu</th>
                             <th>Sửa</th>
                             <th>Xóa</th>
                         </tr>
@@ -63,6 +64,9 @@
                                     else echo 'Nhân viên';
                                     ?><br>
                                 </td>
+                                <td><a href="reset_password.php?id=<?php echo $admin['id'] ?>"
+                                onclick="return confirm('Bạn có muốn đặt lại mật khẩu ko?');"
+                                >Đặt lại</a></td>
                                 <td><a href="form_update.php?id=<?php echo $admin['id'] ?>">Sửa</a></td>
                                 <td><a href="delete.php?id=<?php echo $admin['id'] ?>">X</a></td>
                             </tr>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
+
 <body>
-<?php require '../sidebar.php' ?>
+    <?php require '../sidebar.php' ?>
     <div class="main">
         <?php
         require '../topbar.php';
@@ -46,16 +48,38 @@
                             <tr>
                                 <td> <?php echo $i++ ?></td>
                                 <td> <?php echo $product['name'] ?></td>
-                                <td> 
-                                    <img src="image/<?php echo $product['image'] ?>">
+                                <td>
+                                    <img src="image/<?php echo $product['image'] ?>" height="100">
                                 </td>
                                 <td>
                                     <?php
                                     if ($product['gender'] == 0) echo 'Nam';
                                     else echo 'Nữ';
                                     ?><br>
-                                    <?php echo $product['id_strap'] ?> <br>
-                                    <?php echo $product['id_movement'] ?>
+                                    <?php switch ($product['strap']) {
+                                        case 0: echo 'Thép không gỉ';
+                                            break;
+                                        case 1: echo 'Dây da';
+                                            break;
+                                        case 2: echo 'Dây vải';
+                                            break;
+                                        case 3: echo 'Dây cao su';
+                                            break;
+                                        case 4: echo 'Dây nhựa';
+                                            break;
+                                    }
+                                    ?> <br>
+                                    <?php switch ($product['movement']) {
+                                        case 0: echo 'Automatic';
+                                            break;
+                                        case 1: echo 'Năng lượng mặt trời';
+                                            break;
+                                        case 2: echo 'Lên cót tay';
+                                            break;
+                                        case 3: echo 'Kinetic';
+                                            break;
+                                    }
+                                    ?> <br>
                                 </td>
                                 <td><?php echo $product['brand_name'] ?></td>
                                 <td><a href="detail.php?id=<?php echo $product['id'] ?>">Xem</a></td>
@@ -74,4 +98,5 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
