@@ -17,6 +17,9 @@
         <?php
         require '../topbar.php';
         ?>
+        <?php if (isset($_GET['error'])) {
+            echo $_GET['error'];
+        } ?>
         <div id="wrapper">
             <form action="process_insert.php" method="POST" enctype="multipart/form-data" id="form">
                 <h1 class="form-heading">THÊM NHÂN VIÊN</h1>

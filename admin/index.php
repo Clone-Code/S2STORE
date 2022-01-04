@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <form action="root/">
+    <form action="process_login.php" method="POST">
         email
         <input type="email" name="email">
         <br>
@@ -16,6 +16,10 @@
         <input type="password" name="password">
         <br>
         <button>dang nhap</button>
+        <br>
+        justasimp@gmail.com 
+        <br>
+        1
     </form>
 </body>
 </html>

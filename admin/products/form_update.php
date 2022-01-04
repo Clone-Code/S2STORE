@@ -20,14 +20,22 @@
         ?>
         <?php
         require '../connect.php';
-        $sql = "select products.*, brands.name as brand_name from products
+        $sql = "select products.*, brands.name as brand_name, strap.name as strap_name, movement.name as movement_name
+        from products
         join brands on products.id_brand = brands.id
+        join strap on products.id_strap = strap.id
+        join movement on products.id_movement = movement.id
+        where products.id = '$id'
         ";
         $result = mysqli_query($connect, $sql);
         $product = mysqli_fetch_array($result);
         
         $sql = 'select * from brands';
         $brands = mysqli_query($connect, $sql);
+        $sql = 'select * from strap';
+        $straps = mysqli_query($connect, $sql);
+        $sql = 'select * from movement';
+        $movements = mysqli_query($connect, $sql);
         ?>
         <div id="wrapper">
             <form action="process_update.php" method="POST" enctype="multipart/form-data" id="form">
@@ -67,21 +75,26 @@
                 </div>
                 <div class="form-group">
                     Loại dây
-                    <select name="strap" id="">
-                        <option value="0" <?php if ($product['strap'] == 0) { ?> selected <?php } ?>>Thép không gỉ</option>
-                        <option value="1" <?php if ($product['strap'] == 1) { ?> selected <?php } ?>>Dây da</option>
-                        <option value="2" <?php if ($product['strap'] == 2) { ?> selected <?php } ?>>Dây vải</option>
-                        <option value="3" <?php if ($product['strap'] == 3) { ?> selected <?php } ?>>Dây cao su</option>
-                        <option value="4" <?php if ($product['strap'] == 4) { ?> selected <?php } ?>>Dây nhựa</option>
+                    <select name="id_strap" id="">
+                        <?php foreach ($straps as $strap) { ?>
+                            <option value="<?php echo $strap['id'] ?>"
+                            <?php if ($strap['id'] == $product['id_strap']) { ?> selected <?php } ?>
+                            >
+                                <?php echo $strap['name'] ?>
+                            </option>
+                        <?php } ?>                   
                     </select>
                 </div>
                 <div class="form-group">
                     Kiểu máy
-                    <select name="movement" id="">
-                        <option value="0" <?php if ($product['movement'] == 0) { ?> selected <?php } ?>>Automatic</option>
-                        <option value="1" <?php if ($product['movement'] == 1) { ?> selected <?php } ?>>Năng lượng mặt trời</option>
-                        <option value="2" <?php if ($product['movement'] == 2) { ?> selected <?php } ?>>Lên cót tay</option>
-                        <option value="3" <?php if ($product['movement'] == 3) { ?> selected <?php } ?>>Kinetic</option>
+                    <select name="id_movement" id="">
+                        <?php foreach ($movements as $movement) { ?>
+                            <option value="<?php echo $movement['id'] ?>"
+                            <?php if ($movement['id'] == $product['id_movement']) { ?> selected <?php } ?>
+                            >
+                                <?php echo $movement['name'] ?>
+                            </option>
+                        <?php } ?> 
                     </select>
                 </div>
                 <div class="form-group">

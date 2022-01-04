@@ -20,7 +20,11 @@
         <?php
         require '../connect.php';
         $sql = 'select * from brands';
+        $sql1 = 'select * from strap';
+        $sql2 = 'select * from movement';
         $result = mysqli_query($connect, $sql);
+        $result1 = mysqli_query($connect, $sql1);
+        $result2 = mysqli_query($connect, $sql2);
         ?>
         <div id="wrapper">
             <form action="process_insert.php" method="POST" enctype="multipart/form-data" id="form">
@@ -52,21 +56,22 @@
                 </div>
                 <div class="form-group">
                     Loại dây
-                    <select name="strap" id="">
-                        <option value="0">Thép không gỉ</option>
-                        <option value="1">dây da</option>
-                        <option value="2">dây vải</option>
-                        <option value="3">dây cao su</option>
-                        <option value="4">dây nhựa</option>
+                    <select name="id_strap" id="">
+                    <?php foreach ($result1 as $strap) { ?>
+                            <option value="<?php echo $strap['id'] ?>">
+                                <?php echo $strap['name'] ?>
+                            </option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="form-group">
                     Kiểu máy
-                    <select name="movement" id="">
-                        <option value="0">Automatic</option>
-                        <option value="1">Năng lượng mặt trời</option>
-                        <option value="2">Lên cót tay</option>
-                        <option value="3">Kinetic</option>
+                    <select name="id_movement" id="">
+                    <?php foreach ($result2 as $movement) { ?>
+                            <option value="<?php echo $movement['id'] ?>">
+                                <?php echo $movement['name'] ?>
+                            </option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="form-group">

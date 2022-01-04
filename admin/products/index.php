@@ -1,3 +1,6 @@
+<?php
+require '../check_admin.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +20,11 @@
         ?>
         <?php
         require '../connect.php';
-        $sql = "select products.*, brands.name as brand_name from products
+        $sql = "select products.*, brands.name as brand_name, strap.name as strap_name, movement.name as movement_name
+        from products
         join brands on products.id_brand = brands.id
+        join strap on products.id_strap = strap.id
+        join movement on products.id_movement = movement.id
         ";
         $result = mysqli_query($connect, $sql);
         ?>
@@ -56,29 +62,11 @@
                                     if ($product['gender'] == 0) echo 'Nam';
                                     else echo 'Nữ';
                                     ?><br>
-                                    <?php switch ($product['strap']) {
-                                        case 0: echo 'Thép không gỉ';
-                                            break;
-                                        case 1: echo 'Dây da';
-                                            break;
-                                        case 2: echo 'Dây vải';
-                                            break;
-                                        case 3: echo 'Dây cao su';
-                                            break;
-                                        case 4: echo 'Dây nhựa';
-                                            break;
-                                    }
+                                    <?php
+                                    echo $product['strap_name'];
                                     ?> <br>
-                                    <?php switch ($product['movement']) {
-                                        case 0: echo 'Automatic';
-                                            break;
-                                        case 1: echo 'Năng lượng mặt trời';
-                                            break;
-                                        case 2: echo 'Lên cót tay';
-                                            break;
-                                        case 3: echo 'Kinetic';
-                                            break;
-                                    }
+                                    <?php
+                                    echo $product['movement_name'];
                                     ?> <br>
                                 </td>
                                 <td><?php echo $product['brand_name'] ?></td>

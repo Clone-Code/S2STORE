@@ -1,6 +1,7 @@
 <?php
     if(empty($_POST['name'])) {
         header('location:form_insert.php?error=phaidienten');
+        exit;
     }
 
     $name = $_POST['name'];
@@ -14,6 +15,16 @@
     $role = $_POST['role'];
 
     require '../connect.php';
+    $sql = "select count(*) from admins where email = '$email'";
+    $result = mysqli_query($connect, $sql);
+    $number_row = mysqli_fetch_array($result)['count(*)'];
+
+    if($number_row >= 1) {
+        header('location:form_insert.php?error=Trùng email.');
+        exit;
+    }
+
+
     $sql = "insert into admins(name, email, address, gender, birth, phone, password, role)
     values('$name', '$email', '$address', '$gender', '$birth', '$phone', '$password', '$role')";
 

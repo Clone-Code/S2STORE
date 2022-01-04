@@ -18,7 +18,7 @@
         <?php
         require '../connect.php';
         $sql = "select * from admins
-        order by role desc
+        where role = 0
         ";
         $result = mysqli_query($connect, $sql);
         ?>

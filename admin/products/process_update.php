@@ -14,8 +14,8 @@
     }
     $gender = $_POST['gender'];
     $id_brand = $_POST['id_brand'];
-    $strap = $_POST['strap'];
-    $movement = $_POST['movement'];
+    $id_strap = $_POST['id_strap'];
+    $id_movement = $_POST['id_movement'];
     $price = $_POST['price'];
     $description = $_POST['description'];
 
@@ -26,8 +26,8 @@
     image = '$file_name',
     gender = '$gender',
     id_brand = '$id_brand',
-    strap = '$strap',
-    movement = '$movement',
+    id_strap = '$id_strap',
+    id_movement = '$id_movement',
     price = '$price',
     description = '$description'
     where id = '$id'
