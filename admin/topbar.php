@@ -10,7 +10,10 @@
     </div>
     <div class="user">
         <a href="">
-            <div class="userName">Simp</div>
+            <div class="userName"><?php
+            require 'standardize_name.php';
+            echo print_name($_SESSION['name']);
+            ?></div>
             <img src="../admins/image/user.jpg" alt="">
         </a>
     </div>

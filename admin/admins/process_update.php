@@ -1,6 +1,9 @@
 <?php
+    require '../check_super_admin.php';
+    require '../standardize_name.php';
+
     $id = $_POST['id'];
-    $name = $_POST['name'];
+    $name = standardize_name($_POST['name']);
     $email = $_POST['email'];
     $address = $_POST['address'];
     $gender = $_POST['gender'];

@@ -1,6 +1,10 @@
 <div class="main">
     <?php
     require '../topbar.php';
+    if(isset($_SESSION['error'])) {
+        echo $_SESSION['error'];
+        unset($_SESSION['error']);
+    }
     ?>
     <div class="cardBox">
         <div class="card">
@@ -77,38 +81,6 @@
                         <td>Đồng hồ c</td>
                         <td>120</td>
                         <td>80</td>
-                        <td><span class="status0">Hết hàng</span></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>Đồng hồ d</td>
-                        <td>120</td>
-                        <td>70</td>
-                        <td><span class="status1">Còn hàng</span></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>wibu</td>
-                        <td>120</td>
-                        <td>60</td>
-                        <td><span class="status1">Còn hàng</span></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>đồng hồ wibu</td>
-                        <td>120</td>
-                        <td>50</td>
-                        <td><span class="status1">Còn hàng</span></td>
-                    </tr>
-                </tbody>
-                <tbody>
-                    <tr>
-                        <td>đòng hồ e</td>
-                        <td>120</td>
-                        <td>40</td>
                         <td><span class="status0">Hết hàng</span></td>
                     </tr>
                 </tbody>

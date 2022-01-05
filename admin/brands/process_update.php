@@ -1,4 +1,5 @@
 <?php
+    require '../check_super_admin.php';
     $id = $_POST['id'];
     $name = $_POST['name'];
     $image_new = $_FILES['image_new'];

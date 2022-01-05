@@ -1,10 +1,14 @@
 <?php
-    if(empty($_POST['name'])) {
-        header('location:form_insert.php?error=phaidienten');
+    require '../check_super_admin.php';
+    require '../standardize_name.php';
+    if(empty($_POST['name']) || empty($_POST['email']) || empty($_POST['address']) || empty($_POST['birth']) 
+    || empty($_POST['phone'])) {
+        $_SESSION['error'] = "Phải điền đủ thông tin";
+        header('location:form_insert.php');
         exit;
     }
 
-    $name = $_POST['name'];
+    $name = standardize_name($_POST['name']);
     $email = $_POST['email'];
     $address = $_POST['address'];
     $gender = $_POST['gender'];

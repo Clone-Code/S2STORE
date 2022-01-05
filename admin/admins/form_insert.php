@@ -1,3 +1,6 @@
+<?php
+require '../check_super_admin.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +20,9 @@
         <?php
         require '../topbar.php';
         ?>
-        <?php if (isset($_GET['error'])) {
-            echo $_GET['error'];
+        <?php if (isset($_SESSION['error'])) {
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
         } ?>
         <div id="wrapper">
             <form action="process_insert.php" method="POST" enctype="multipart/form-data" id="form">

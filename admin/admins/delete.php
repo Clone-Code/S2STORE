@@ -1,4 +1,5 @@
 <?php
+require '../check_super_admin.php';
 $id = $_GET['id'];
 require '../connect.php';
 
@@ -10,4 +11,4 @@ mysqli_query($connect, $sql);
 $error  = mysqli_error($connect);
 mysqli_close($connect);
 
-header('location:index.php?success=xoathanhcong');
+header('location:index.php');

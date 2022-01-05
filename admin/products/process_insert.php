@@ -1,7 +1,11 @@
 <?php
-    // if(empty($_POST['name'])) {
-    //     header('location:form_insert.php?error=phaidienten');
-    // }
+    require '../check_admin.php';
+    if(empty($_POST['name']) || empty($_POST['image']) || empty($_POST['gender']) || empty($_POST['price']) 
+    || empty($_POST['description'])) {
+        $_SESSION['error'] = "Phải điền đầy đủ thông tin";
+        header('location:form_insert.php');
+        exit;
+    }
 
     $name = $_POST['name'];
     $image = $_FILES['image'];

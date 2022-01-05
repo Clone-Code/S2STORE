@@ -1,7 +1,7 @@
 <?php
 $id = $_GET['id'];
 
-
+require '../check_super_admin.php';
 require '../connect.php';
 
 $sql = "select birth from admins

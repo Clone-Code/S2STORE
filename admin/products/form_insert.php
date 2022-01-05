@@ -1,3 +1,6 @@
+<?php
+require '../check_admin.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +20,10 @@
         <?php
         require '../topbar.php';
         ?>
+        <?php if (isset($_SESSION['error'])) {
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
+        } ?>
         <?php
         require '../connect.php';
         $sql = 'select * from brands';
