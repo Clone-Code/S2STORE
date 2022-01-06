@@ -9,4 +9,5 @@ where id = '$id'
 
 mysqli_query($connect, $sql);
 
+$_SESSION['success'] = "Xóa thành công";
 header('location:index.php');

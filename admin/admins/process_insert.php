@@ -24,7 +24,8 @@
     $number_row = mysqli_fetch_array($result)['count(*)'];
 
     if($number_row >= 1) {
-        header('location:form_insert.php?error=Trùng email.');
+        $_SESSION['error'] = "Trùng email";
+        header('location:form_insert.php');
         exit;
     }
 
@@ -37,4 +38,5 @@
     echo $error;
     mysqli_close($connect);
 
+    $_SESSION['success'] = "Thêm thành công";
     header('location:index.php');

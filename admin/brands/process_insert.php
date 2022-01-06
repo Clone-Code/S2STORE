@@ -25,4 +25,5 @@
     echo $error;
     mysqli_close($connect);
 
+    $_SESSION['success'] = "Thêm thành công";
     header('location:index.php');

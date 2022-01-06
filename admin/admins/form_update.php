@@ -20,6 +20,10 @@ require '../check_super_admin.php';
     <div class="main">
         <?php
         require '../topbar.php';
+        if (isset($_SESSION['error'])) {
+            echo $_SESSION['error'];
+            unset($_SESSION['error']);
+        }
         require '../connect.php';
         $sql = "select * from admins
         where id = '$id'";

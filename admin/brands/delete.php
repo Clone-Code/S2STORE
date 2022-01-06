@@ -11,4 +11,5 @@ mysqli_query($connect, $sql);
 $error  = mysqli_error($connect);
 mysqli_close($connect);
 
-header('location:index.php?success=xoathanhcong');
+$_SESSION['success'] = "Xóa thành công";
+header('location:index.php');
